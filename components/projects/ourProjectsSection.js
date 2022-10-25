@@ -32,18 +32,18 @@ export const OurProjectsSection = () => {
         let current = data.filter((x) => {
           return x.Status === "current";
         });
-
-        if (past && past.length > 1) {
-          setProjectDisplayArr(past.slice(0, 3));
-          setFilter({
-            isCurrent: false,
-            isPast: true,
-          });
-        } else if (current && current.length > 1) {
+        
+        if (current && current.length > 1) {
           setProjectDisplayArr(current.slice(0, 3));
           setFilter({
             isCurrent: true,
             isPast: false,
+          });
+        } else if (past && past.length > 1) {
+          setProjectDisplayArr(past.slice(0, 3));
+          setFilter({
+            isCurrent: false,
+            isPast: true,
           });
         }
       })
@@ -95,17 +95,15 @@ export const OurProjectsSection = () => {
         <MDBRow>
           <MDBCol size="12" className={`${STYLES.tab} mt-3`}>
             <a
-              className={`${STYLES.tabTitle} ml-md-4 ${
-                filter.isCurrent === true ? STYLES.active : STYLES.notActive
-              }`}
+              className={`${STYLES.tabTitle} ml-md-4 ${filter.isCurrent === true ? STYLES.active : STYLES.notActive
+                }`}
               onClick={() => onClickFilter("current")}
             >
               Current Projects
             </a>
             <a
-              className={`${STYLES.tabTitle} ml-md-5 ml-4 ${
-                filter.isPast === true ? STYLES.active : STYLES.notActive
-              }`}
+              className={`${STYLES.tabTitle} ml-md-5 ml-4 ${filter.isPast === true ? STYLES.active : STYLES.notActive
+                }`}
               onClick={() => onClickFilter("past")}
             >
               Past Projects

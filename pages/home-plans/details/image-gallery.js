@@ -51,13 +51,13 @@ const ImageGalleryPage = () => {
   return (
     <>
       {/* <BannerSection img={`${IMG_BANNER_FILE_ROOT}${planCode}.jpg`} /> */}
-      {/* <BannerSection
+      <BannerSection
         img={`${IMG_BANNER_FILE_ROOT}${planCode}.jpg`}
         data={processedHomePlans}
         page={"IMAGE_GALLERY"}
-      /> */}
+      />
 
-      <img src={`${IMG_BANNER_FILE_ROOT}${planCode}.jpg`} style={{ width: "100%" }} />
+      {/* <img src={`${IMG_BANNER_FILE_ROOT}${planCode}.jpg`} style={{ width: "100%" }} /> */}
 
       <ScrollIntoView mode={"default"} />
       <SubNavbar

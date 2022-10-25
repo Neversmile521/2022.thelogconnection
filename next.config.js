@@ -26,7 +26,7 @@ if (process.env.NODE_ENV === "development") {
       PDF_ENDPOINT: "http://127.0.0.1:8000/pdf/generate_pdf.php",
       // IMG_BASE_URL: "http://localhost:3000",
       IMG_BASE_URL: "http://2021.thelogconnection.com/_assets",
-      DATA_BASE_URL: "http://localhost:3000/_data",
+      DATA_BASE_URL: "http://2021.thelogconnection.com/_data",
     },
   });
 } else {
